@@ -1,0 +1,52 @@
+# vim-plug Documentation
+
+## Introduction
+vim-plug is a minimalist plugin manager for Vim. It allows you to install, update, and manage your Vim plugins efficiently.
+
+## Installation
+Follow these steps to install vim-plug in your Vim setup...
+
+## Commands
+
+### COMMANDS
+
+| Command                             | Description                                                      |
+|-------------------------------------|------------------------------------------------------------------|
+| `PlugInstall [name ...] [#threads]`| Install plugins                                                  |
+| `PlugUpdate [name ...] [#threads]` | Install or update plugins                                       |
+| `PlugClean[!]`                     | Remove unlisted plugins                                         |
+| `PlugUpgrade`                      | Upgrade vim-plug itself                                         |
+| `PlugStatus`                       | Check the status of plugins                                     |
+| `PlugDiff`                         | Examine changes from the previous update                        |
+| `PlugSnapshot[!] [output path]`    | Generate script for restoring the current snapshot of plugins   |
+
+## Plug Options
+
+### PLUG OPTIONS
+
+| Option                             | Description                                              |
+|------------------------------------|----------------------------------------------------------|
+| `branch` / `tag` / `commit`       | Branch/tag/commit of the repository to use              |
+| `rtp`                              | Subdirectory that contains the Vim plugin                |
+| `dir`                              | Custom directory for the plugin                           |
+| `as`                               | Use different name for the plugin                        |
+| `do`                               | Post-update hook (string or funcref)                    |
+| `on`                               | On-demand loading: Commands or <Plug>-mappings          |
+| `for`                              | On-demand loading: File types                             |
+| `frozen`                           | Do not remove and do not update unless explicitly specified|
+
+## Global Options
+
+| Flag                             | Default                            | Description                                                           |
+|----------------------------------|------------------------------------|-----------------------------------------------------------------------|
+| `g:plug_threads`                 | 16                                 | Default number of threads to use                                      |
+| `g:plug_timeout`                 | 60                                 | Time limit of each task in seconds                                   |
+| `g:plug_retries`                 | 2                                  | Number of retries in case of timeout                                  |
+| `g:plug_shallow`                 | 1                                  | Use shallow clone                                                    |
+| `g:plug_window`                  | `-tabnew`                          | Command to open the plug window                                      |
+| `g:plug_pwindow`                 | `vertical rightbelow new`         | Command to open preview window in `PlugDiff`                         |
+| `g:plug_url_format`              | `https://git::@github.com/%s.git` | `printf` format to build repo URL                                    |
+
+## Examples
+### Installing a Plugin
+To install a new plugin, use:
